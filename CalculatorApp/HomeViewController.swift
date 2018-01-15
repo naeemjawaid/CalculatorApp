@@ -10,12 +10,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //MARK: - Properties
+    
     let homeView: HomeView = {
         let hv = HomeView()
         hv.backgroundColor = .white
         hv.translatesAutoresizingMaskIntoConstraints = false
         return hv
     }()
+    
+    //MARK: - View Appearance
     
     override func viewDidLoad() {
         super.viewDidLoad()
