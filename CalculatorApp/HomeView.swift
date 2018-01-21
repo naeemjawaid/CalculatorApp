@@ -10,6 +10,7 @@ import UIKit
 
 class HomeView: UIView {
     
+    // MARK: - Properties
     weak var homeViewController: HomeViewController? {
         didSet {
             setupHomeView()
@@ -20,20 +21,12 @@ class HomeView: UIView {
         let label = UILabel()
         label.text = "Hello World!"
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.backgroundColor = .blue
+        //        label.backgroundColor = .blue
         label.textAlignment = .center
         return label
     }()
     
-    private func setupViews() {
-        
-        addSubview(label)
-        label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        label.widthAnchor.constraint(equalToConstant: 160).isActive = true
-        label.heightAnchor.constraint(equalToConstant: 36).isActive = true
-    }
-    
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -42,6 +35,17 @@ class HomeView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - View setup
+    
+    private func setupViews() {
+        
+        addSubview(label)
+        label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 160).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 36).isActive = true
     }
     
     private func setupHomeView() {
