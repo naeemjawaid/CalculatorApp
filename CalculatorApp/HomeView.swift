@@ -6,9 +6,6 @@
 //  Copyright © 2018 Swift iOS Tutorials. All rights reserved.
 //
 
-// This line of comment is added in branch: develop
-// this line of comment is added in comment-branch
-
 import UIKit
 
 class HomeView: UIView {
